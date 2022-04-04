@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="ClassMate1.LogIn">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="GrdHeader">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnLogOut" Grid.Row="0" Grid.Column="4" FontSize="Medium" Text="Log In" Margin="20" CornerRadius="5" Clicked="BtnLogOut_Clicked" />
+                
+                <Button x:Name="BtnHome" Grid.Row="0" Grid.Column="0" FontSize="Medium" Text="Home" Margin="20" CornerRadius="5" Clicked="BtnHome_Clicked" />
+            </Grid>
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Label x:Name="LblUName" Text="Username:"/>
+                    <Entry x:Name="EntUName" Placeholder="johndoe@yourmail.com" WidthRequest="180"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Label x:Name="LblPassword" Text="Password: "/>
+                    <Entry x:Name="EntPassword"  WidthRequest="180"/>
+
+                </StackLayout>
+                <Button x:Name="BtnLogIn" Text="Log In"  CornerRadius="5" Margin="5" Clicked="BtnLogIn_Clicked"/>
+                <Label Text="No Account?" FontSize="Medium"/>
+                <Button x:Name="BtnSignUp" Text="Sign Up" Clicked="BtnSignUp_Clicked" CornerRadius="5" Margin="5"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
